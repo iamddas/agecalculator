@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="./images/favicon.png" rel="icon">
+    <title>Age Calculater-By Debasish Das</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Age Calculater</h1>
+        <form onsubmit="Calculate(); return false;">
+            <div class="row">
+                <div class="col-25">
+                    <label for="day">Day</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" onkeyup="valid1()" value="" id="day" placeholder="Your Birth Date" autofocus autocomplete="off" maxlength="2"> <span id="dayerr"></span><br>
+                </div>
+                <div class="col-25">
+                    <label for="month">Month</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" oninput="valid2()" value="" id="month" placeholder="Your Birth Month" maxlength="2" autocomplete="off"> <span id="montherr"></span><br>
+                </div>
+                <div class="col-25">
+                    <label for="year">Year</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" oninput="valid3()" value="" id="year" placeholder="Your Birth Year" maxlength="4" autocomplete="off"> <span id="yearerr" ></span><br>
+                </div>
+                <div class="col-75">
+                <input type="submit" id="btn" onclick="valid()" value="Calculate" width="100%">
+                </div>
+            </div>
+        </form>
+        <h2 id="error"></h2>
+        <h3 id="result"></h3>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
